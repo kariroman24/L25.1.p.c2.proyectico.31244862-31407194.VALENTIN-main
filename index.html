@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id = "floresForm">
+        <h2>Datos de Ramo de Flores</h2>
+        <label>Codigo</label>
+        <input type = "text" id="floresForm_inCodigo" placeholder = "Codigo">
+        <label>Tamaño del envase (1, 2, 3)</label>
+        <input type = "text" id="floresForm_inEnvase" placeholder = "1-P, 2-M, 3-G">
+        <label>Costo del Ramo</label>
+        <input type = "text" id="floresForm_inCostoNeto" placeholder = "Costo">
+        <label>Tipo (N-Natural o A-Artificial)</label>
+        <input type = "text" id="floresForm_inTipo" placeholder = "Tipo">
+        <button id = "floresForm_btProcesarFlores">Procesar Ramo de Flores</button>
+    </section>
+
+    <section id = "frutaForm">
+        <h2>Datos de Ramo de Frutas</h2>
+        <label>Codigo</label>
+        <input type = "text" id="frutaForm_inCodigo" placeholder = "Codigo">
+        <label>Tamaño del envase (1, 2, 3)</label>
+        <input type = "text" id="frutaForm_inEnvase" placeholder = "1-P, 2-M ,3-G">
+        <label>Costo del Ramo</label>
+        <input type = "text" id="frutaForm_inCostoNeto" placeholder = "Costo">
+        <label>Adicional (SI o NO)</label>
+        <input type = "text" id="frutaForm_inAdicional" placeholder = "Adicional">
+        <button id="frutaForm_btProcesarFruta">Procesar Ramo de Frutas</button>
+    </section>
+
+    <section>
+        <div id="salida"></div>
+
+        <table id="tablaFlores">
+            <h3>Ramos de Flores</h3>
+            <tr>
+                <th>Codigo</th> 
+                <th>Envase</th>
+                <th>Costo</th>
+                <th>Tipo</th>
+                <th>Descuento</th>
+                <th>Incremento</th>
+                <th>Precio</th>
+            </tr>
+        </table>
+        
+
+        <table id="tablaFruta">
+            <h3>Ramos de Frutas</h3>
+            <tr>
+                <th>Codigo</th> 
+                <th>Envase</th>
+                <th>Costo</th>
+                <th>Extra</th>
+                <th>Descuento</th>
+                <th>Precio</th>
+            </tr>
+            </tr>
+        </table>
+    </section>
+</body>
+<script type = "module">
+    import principal from "./js/principal.js";
+    new principal();
+</script>
+</html>
