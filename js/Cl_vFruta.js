@@ -4,6 +4,7 @@ export default class Cl_vFruta {
         this.inEnvase = document.getElementById("frutaForm_inEnvase");
         this.inCostoNeto = document.getElementById("frutaForm_inCostoNeto");
         this.inAdicional = document.getElementById("frutaForm_inAdicional");
+        this.inCantidad = document.getElementById("frutaForm_inCantidad")
         this.btProcesar = document.getElementById("frutaForm_btProcesarFruta");
     }
     get codigo(){
@@ -17,5 +18,8 @@ export default class Cl_vFruta {
     }
     get adicional(){
         return this.inAdicional.value;
+    }
+    get cantidad(){
+        return this.inCantidad.value;
     }
 }

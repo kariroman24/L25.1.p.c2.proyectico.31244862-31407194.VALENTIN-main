@@ -12,11 +12,13 @@
         <label>Codigo</label>
         <input type = "text" id="floresForm_inCodigo" placeholder = "Codigo">
         <label>Tamaño del envase (1, 2, 3)</label>
-        <input type = "text" id="floresForm_inEnvase" placeholder = "1-P, 2-M, 3-G">
+        <input type = "text" id="floresForm_inEnvase" placeholder = "Envase">
         <label>Costo del Ramo</label>
         <input type = "text" id="floresForm_inCostoNeto" placeholder = "Costo">
         <label>Tipo (N-Natural o A-Artificial)</label>
         <input type = "text" id="floresForm_inTipo" placeholder = "Tipo">
+        <label> Cantidad</label>
+        <input type = "text" id="floresForm_inCantidad" placeholder = "Cantidad">
         <button id = "floresForm_btProcesarFlores">Procesar Ramo de Flores</button>
     </section>
 
@@ -25,11 +27,13 @@
         <label>Codigo</label>
         <input type = "text" id="frutaForm_inCodigo" placeholder = "Codigo">
         <label>Tamaño del envase (1, 2, 3)</label>
-        <input type = "text" id="frutaForm_inEnvase" placeholder = "1-P, 2-M ,3-G">
+        <input type = "text" id="frutaForm_inEnvase" placeholder = "Envase">
         <label>Costo del Ramo</label>
         <input type = "text" id="frutaForm_inCostoNeto" placeholder = "Costo">
         <label>Adicional (SI o NO)</label>
         <input type = "text" id="frutaForm_inAdicional" placeholder = "Adicional">
+        <label> Cantidad</label>
+        <input type = "text" id="frutaForm_inCantidad" placeholder = "Cantidad">
         <button id="frutaForm_btProcesarFruta">Procesar Ramo de Frutas</button>
     </section>
 
@@ -47,8 +51,13 @@
                 <th>Incremento</th>
                 <th>Precio</th>
             </tr>
-        </table>
-        
+            <table id = "tablaSubFlores">
+                <tr>
+                    <th>Total Ramo de Flores</th>
+                    <td>0$</td>
+                </tr>
+            </table>
+        </table><br>
 
         <table id="tablaFruta">
             <h3>Ramos de Frutas</h3>
@@ -59,13 +68,18 @@
                 <th>Extra</th>
                 <th>Descuento</th>
                 <th>Precio</th>
+            <table id = "tablaSubFruta">
+                <tr>
+                    <th>Total Ramo de Frutas</th>
+                    <td>0$</td>
+                </tr>
+            </table>
             </tr>
-            </tr>
-        </table>
+        </table><br>
     </section>
 </body>
 <script type = "module">
-    import principal from "./js/principal.js";
-    new principal();
+    import index from "./js/principal.js";
+    new index();
 </script>
 </html>

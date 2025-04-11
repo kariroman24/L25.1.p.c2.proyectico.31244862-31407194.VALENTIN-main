@@ -10,7 +10,9 @@ export default class Cl_controlador {
             this.modelo.calcularPorcentajeFloresNaturalesMediano(), 
             this.modelo.totalFloresNaturalesMediano(), 
             this.modelo.totalFloresNaturales(),
-            this.modelo.totalFlores());
+            this.modelo.totalFlores(),
+            this.modelo.cantidadRamos1(),
+            this.modelo.porcentajeRamos1());
     }
     procesarFruta() {
         this.modelo.procesarRamo(this.vista.iniciarFruta(), this.vista.iniciarFlores());
@@ -19,6 +21,8 @@ export default class Cl_controlador {
             this.modelo.calcularPorcentajeFloresNaturalesMediano(), 
             this.modelo.totalFloresNaturalesMediano(), 
             this.modelo.totalFloresNaturales(),
-            this.modelo.totalFrutas());
+            this.modelo.totalFruta(),
+            this.modelo.cantidadRamos1(),
+            this.modelo.porcentajeRamos1());
     }
 }

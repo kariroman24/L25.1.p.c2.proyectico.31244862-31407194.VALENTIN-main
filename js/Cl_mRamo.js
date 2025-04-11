@@ -1,8 +1,9 @@
 export default class Cl_mRamo { 
-    constructor(codigo, envase, costoNeto) {
+    constructor(codigo, envase, costoNeto, cantidad) {
         this.codigo = codigo;
         this.envase = envase;
         this.costoNeto = costoNeto;
+        this.cantidad = cantidad; 
     }
     set codigo(codigo) {
         this._codigo = +codigo;
@@ -22,5 +23,13 @@ export default class Cl_mRamo {
     get costoNeto() {
         return this._costoNeto;
     }
-    
+    set cantidad(cantidad){
+        this._cantidad = +cantidad;
+    }
+    get cantidad(){
+        return this._cantidad;
+    }
+    totalCosto(){
+        this.costoNeto * this.cantidad;
+    }
 }

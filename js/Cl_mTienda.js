@@ -6,9 +6,21 @@ export default class Cl_mTienda {
         this.acumCostoFruta = 0;
         this.contFloresNaturalesMediano = 0;
         this.contFloresNaturales = 0;
+        this.contRamosFlores1 = 0;
+        this.contRamosFrutas1 = 0;
+        this.contRamosFlores = 0;
+        this.contRamosFrutas = 0;
+        this.contRamos1 =0;
     }
     procesarRamo(ramo){
+        if (ramo.cantidad > 1) {
+            this.contRamos1++;
+        }
         if (ramo instanceof Cl_mFlores) {
+            this.contRamosFlores++;
+            if (ramo.cantidad > 1) {
+                this.contRamosFlores1++;
+            }
             if (ramo.envase === "2" && ramo.tipo === "N") {
                 this.contFloresNaturalesMediano++;
             }
@@ -18,6 +30,10 @@ export default class Cl_mTienda {
             this.acumCostoFlores += ramo.calcularCosto();
         }
         if (ramo instanceof Cl_mFruta) {
+            this.contRamosFrutas++;
+            if (ramo.cantidad > 1) {
+                this.contRamosFrutas1++;
+            }
             this.acumCostoFruta += ramo.calcularCosto();
         }
 }
@@ -39,9 +55,18 @@ export default class Cl_mTienda {
         }
     }
     totalFlores(){
-        return this.acumCostoFlores;
+        return this.acumCostoFlores
     }
-    totalFrutas(){
-        return this.acumCostoFruta;
+    totalFruta(){
+        return this.acumCostoFruta
+    }
+    cantidadRamos1(){
+        return this.contRamosFlores1 + this.contRamosFrutas1;
+    }
+    cantidadRamos(){
+        return this.contRamosFlores + this.contRamosFrutas;
+    }
+    porcentajeRamos1(){
+        return (this.contRamos1 * 100) / this.cantidadRamos();
     }
 }

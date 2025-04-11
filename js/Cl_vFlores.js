@@ -4,6 +4,7 @@ export default class Cl_vFlores {
         this.inEnvase = document.getElementById("floresForm_inEnvase");
         this.inCostoNeto = document.getElementById("floresForm_inCostoNeto");
         this.inTipo = document.getElementById("floresForm_inTipo");
+        this.inCantidad = document.getElementById("floresForm_inCantidad")
         this.btProcesar = document.getElementById("floresForm_btProcesarFlores");
     }
     get codigo(){
@@ -17,5 +18,8 @@ export default class Cl_vFlores {
     }
     get tipo(){
         return this.inTipo.value;
+    }
+    get cantidad(){
+        return this.inCantidad.value; 
     }
 }
